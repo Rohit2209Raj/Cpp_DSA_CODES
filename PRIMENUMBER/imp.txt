@@ -1,0 +1,4 @@
+if i is factor of n then n/i must be a factpr
+
+composite(not perfect square): even number of roots;
+else not odd number of roots

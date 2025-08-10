@@ -1,0 +1,23 @@
+                                      sheet 1;
+Q1)Calculate the time complexity for the following code snippet.
+int c = 0;
+for(int i = n; i > 0; i /= 2) {
+c++;
+}
+
+Solution : 
+O(logN), because each time n gets divided by 2 in each iteration, so in total 
+the loop will be iterated logN to the base 2 times. 
+
+
+Q2)Calculate the time complexity for the following code snippet.
+int c = 0;
+for(int i = n; i > 1; i /= i) {
+c++;
+}
+
+Solution : 
+O(1), because the loop will only be iterated once. After one iteration ‘i’ will 
+become 1 from n and the loop will break.
+
+3)

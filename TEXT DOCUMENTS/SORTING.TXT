@@ -1,0 +1,42 @@
+for(int i=0;i<n-1;i++){
+        for(int j=0;j<n-1-i;j++){
+            if(arr[j]>arr[j+1]){
+              swap(arr[j],arr[j+1]);
+            }
+        }
+    }
+
+
+
+
+
+    /// insertion//
+    for(int i=1;i<n;i++){
+        cout<<i<<endl;
+        for(int j=i;j>0;j--){
+            
+             if(arr[j]>=arr[j-1]) break;
+            if(arr[j]<arr[j-1]){
+                swap(arr[j],arr[j-1]);
+            }
+        }
+    }
+
+
+
+    //// BUBBLE ///
+    for(int i=0;i<4;i++){
+         min=arr[i];
+         cout<<i<<endl;
+         flag=true;
+        for(int j=i+1;j<5;j++){
+            if(arr[j]<min) {
+                min=arr[j];
+                minidx=j;
+                flag=false;
+            }
+        }
+        if(flag==true) break;
+        swap(arr[i],arr[minidx]);
+        
+    }

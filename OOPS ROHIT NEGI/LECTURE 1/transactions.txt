@@ -1,0 +1,5 @@
+Account: 1001, Deposit: $500, Balance: $5500
+Account: 1001, Deposit: $500, Balance: $5500
+Account: 1001, Withdraw: $1000, Balance: $4500
+Account: 1001, Transfer Out: $1000, Balance: $3500
+Account: 1002, Transfer In: $1000, Balance: $4000

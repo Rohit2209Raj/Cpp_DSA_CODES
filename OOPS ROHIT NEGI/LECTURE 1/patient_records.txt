@@ -1,0 +1,5 @@
+Patient: vachan
+Heart Rate: 60 BPM
+Blood Pressure: 90 mmHg
+Temperature: 100 F
+--------------------------
