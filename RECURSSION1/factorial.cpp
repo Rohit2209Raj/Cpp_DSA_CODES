@@ -13,7 +13,7 @@ int fact(int n){
 // }
 void factupto(int n){
       for(int i=1;i<=n;i++){
-        cout<<"fact of "<<i<<" is"<< fact(i)<<endl;
+        cout<<"fact of "<<i<<" is "<< fact(i)<<endl;
       }
 }
 int main(){
@@ -21,5 +21,7 @@ int main(){
     cout<<"enter your number: ";
     cin>>n;
     cout<<fact(n);
+    cout<<endl;
+    factupto(n);
 
 }
