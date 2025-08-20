@@ -278,13 +278,26 @@ using namespace std;
 // }
 
 // Convert decimal number to bin recursively
-int bin(int n,int i){
-    if(n==0) return 0;
-    return  (n%10)*pow(2,i)+bin(n/10,i+1);
-}
-int main(){
-    int n;
-    cout<<"Enter decimal number: ";
-    cin>>n;
-    cout<<bin(n,0);
-}
+// int bin(int n){
+//     if(n==0) return 0;
+//     return  bin(n/2) * 10+(n%2) ;
+// }
+// int main(){
+//     int n;
+//     cout<<"Enter decimal number: ";
+//     cin>>n;
+//     cout<<bin(n);
+// }
+
+//  Find the sum of an arithmetic series recursively.
+// int  sum(int a,int d,int n,int s){
+//     if(n==1) return a;
+//     else return s+d+sum(a,d,n-1,s);
+// }
+// int main(){
+//     int n;
+//     cout<<"Enter n: ";
+//     cin>>n;
+//     cout<<sum(2,3,n,0);
+// }
+
