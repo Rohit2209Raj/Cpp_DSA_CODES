@@ -1,0 +1,65 @@
+1️⃣ Subarray
+
+👉 Continuous part of the array (elements are together).
+
+Must maintain order.
+
+Must be contiguous (no gaps).
+
+Example:
+Array = [1, 2, 3]
+Possible subarrays:
+
+[1], [2], [3]
+
+[1,2], [2,3]
+
+[1,2,3]
+
+❌ [1,3] is not a subarray (because elements are not next to each other).
+
+2️⃣ Subsequence
+
+👉 Elements can be taken from anywhere, but order must be same as in original.
+
+Not necessarily continuous, but order matters.
+
+Example:
+Array = [1, 2, 3]
+Possible subsequences:
+
+[1], [2], [3]
+
+[1,2], [2,3], [1,3]
+
+[1,2,3]
+
+[] (empty subsequence is allowed)
+
+3️⃣ Subset
+
+👉 Any combination of elements, order does not matter.
+
+It’s just like picking elements without caring about order or positions.
+
+Example:
+Array = [1, 2, 3]
+Possible subsets:
+
+[]
+
+[1], [2], [3]
+
+[1,2], [1,3], [2,3]
+
+[1,2,3]
+
+Here [2,1] is also considered same subset as [1,2] (order doesn’t matter in subsets).
+
+🚀 Super Simple Difference:
+
+Subarray → continuous block
+
+Subsequence → order same, not necessarily continuous
+
+Subset → just a group, order doesn’t matter

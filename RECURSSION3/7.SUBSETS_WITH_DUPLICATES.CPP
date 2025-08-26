@@ -43,10 +43,10 @@ void fill(vector<string>&sol,string &temp,string &s,int idx,bool flag){
     char ch=s[idx];
     if(idx==s.size()-1){
         temp.push_back(ch);
-        fill(sol,temp,s,idx+1,true);
+      if(flag==true)  fill(sol,temp,s,idx+1,true); // alway put true condition
         temp.pop_back();
         fill(sol,temp,s,idx+1,true);
-        return;
+        return; // important to return after it; 
     }
     char dh=s[idx+1];
     if(ch==dh){
@@ -67,6 +67,7 @@ int main(){
     getline(cin,s);
     vector<string>sol;
     string temp;
+    sort(s.begin(),s.end()); // ULTRA IMPORTANT
     fill(sol,temp,s,0,true);
     for(int i=0;i<sol.size();i++) cout<<sol[i]<<endl;
 }
