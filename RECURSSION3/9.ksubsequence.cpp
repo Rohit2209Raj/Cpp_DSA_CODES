@@ -38,16 +38,19 @@ using namespace std;
 
 // 2 nd Method
 void show(int n,int k,vector<int>&temp,int idx){
-   if(idx>n) return;
+   //if(idx>n) return;
    if(temp.size()==k){
       for(auto i:temp) cout<<i<<" ";
       cout<<endl;
       return;
    }
+   for(int i=idx;i<=n;i++){
    temp.push_back(idx);
-   show(n,k,temp,idx+1);
+   show(n,k,temp,i+1);
    temp.pop_back();
-   show(n,k,temp,idx+1);
+   //show(n,k,temp,idx+1);
+   }
+   
 }
 int main(){
    int n;
