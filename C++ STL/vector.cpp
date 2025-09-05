@@ -1,7 +1,7 @@
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
+//int main(){
     // vector<int>v;
     // vector<pair<int,int>>v2;
     // v2.push_back({1,2});
@@ -49,18 +49,57 @@ int main(){
 
     //  ERASE
 
-    vector<int>v={10,20,30,40,50};
-    for(auto i: v) cout<<i<<" ";
+    // vector<int>v={10,20,30,40,50,60,70,80,90};
+    // for(auto i: v) cout<<i<<" ";
+    // cout<<endl;
+    // v.erase(v.begin());
+    // for(auto i: v) cout<<i<<" ";
+    // cout<<endl;
+    // v.erase(v.begin(),v.begin()+2);  // like [a,b);
+    // for(auto i: v) cout<<i<<" ";
+    // cout<<endl;
+
+    // INSERT
+
+    // vector<int>v={10,20,30,40,50,60,70,80,90};
+    // for(auto i: v) cout<<i<<" ";
+    // cout<<endl;
+    // v.insert(v.begin()+1,5,-1);
+    // for(auto i: v) cout<<i<<" ";
+    // cout<<endl;
+    // vector<int>second={100,100};
+    // v.insert(v.begin()+1,second.begin(),second.end());
+    // for(auto i: v) cout<<i<<" ";
+    // cout<<endl;
+
+    // SWAP
+    // vector<int>v={10,20,30,40,50,60,70,80,90};
+    // for(auto i: v) cout<<i<<" ";
+    // cout<<endl;
+    // vector<int>second={100,100};
+    // v.swap(second);
+    // for(auto i: v) cout<<i<<" ";
+    // cout<<endl;
+    
+
+    // USER DEFINED COMPARATORS;
+    bool custom_cmp(int a,int b){
+        if(a<b) return false;
+        return true;
+    }
+    int main(){
+    vector<int>v={10,5,3,6,2};
+    for(auto ele:v) cout<<ele<<" ";
     cout<<endl;
-    v.erase(v.begin());
-    for(auto i: v) cout<<i<<" ";
+    sort(v.begin(),v.end(),custom_cmp);
+    for(auto ele:v) cout<<ele<<" ";
     cout<<endl;
 
-
+    }
+    
 
 
 
         
 
 
-}
