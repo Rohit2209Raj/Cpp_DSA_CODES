@@ -1,3 +1,6 @@
+
+// Dono call se pehle work is called preorder
+//Root Left Right
 #include<iostream>
 #include<climits>
 using namespace std;
@@ -13,20 +16,36 @@ class node{
         this->left=NULL;
     }
 };
+
+
 void preOrderTraversal(node* root){
-    if(root==NULL){
-        return;
-    }
+    if(root == NULL) return;
     cout<<root->val<<" ";
     preOrderTraversal(root->left);
     preOrderTraversal(root->right);
 }
+
+void inOrderTraversal(node* root){
+    if(root == NULL) return;
+    inOrderTraversal(root->left);
+    cout<<root->val<<" ";
+    inOrderTraversal(root->right);
+}
+
+void postOrderTraversal(node* root){
+    if(root == NULL) return;
+    postOrderTraversal(root->left);
+    postOrderTraversal(root->right);
+    cout<<root->val<<" ";
+}
+
+
 void printNthLevel(node* root,int level){
-    if(root==NULL) return;
-    if(level==2) cout<<root->val<<" ";
-    printNthLevel(root->left,level+1);
-    printNthLevel(root->right,level+1);
-};
+    if(root == NULL) return;
+    if(level==0) cout<<root->val<<" ";
+    printNthLevel(root->left,level-1);
+    printNthLevel(root->right,level-1);
+}
 int main(){
     node* a=new node(1);
     node* b=new node(2);
@@ -45,5 +64,9 @@ int main(){
     c->right=g;
     preOrderTraversal(a);
     cout<<endl;
-    printNthLevel(a,0);
+    inOrderTraversal(a);
+    cout<<endl;
+    postOrderTraversal(a);
+    cout<<endl;
+    printNthLevel(a,1);
 }

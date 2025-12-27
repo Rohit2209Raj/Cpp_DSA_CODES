@@ -22,9 +22,6 @@ int main(){
         curr=curr+prev;
         prev=x;
         k++;
-        
     }
-
     cout<<curr;
-    
 }

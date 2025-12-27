@@ -17,25 +17,23 @@ class node{
     }
 };
 void preOrderTraversal(node* root){
-    if(root==NULL){
-        return;
-    }
+    if(root==NULL)return;
+    
     cout<<root->val<<" ";
     preOrderTraversal(root->left);
     preOrderTraversal(root->right);
 }
 void inOrderTraversal(node* root){
-    if(root==NULL){
-        return;
-    }
+    if(root==NULL)return;
+    
     inOrderTraversal(root->left);
     cout<<root->val<<" ";
     inOrderTraversal(root->right);
 }
 void postOrderTraversal(node* root){
-    if(root==NULL){
+    if(root==NULL)
         return;
-    }
+    
     postOrderTraversal(root->left);
     postOrderTraversal(root->right);
     cout<<root->val<<" ";

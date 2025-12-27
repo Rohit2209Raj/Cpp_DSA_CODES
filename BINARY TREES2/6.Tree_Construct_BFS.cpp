@@ -15,19 +15,6 @@ class node{
         this->left=NULL;
     }
 };
-void levelOrderQueue(node* root){   // BFS
-    queue<node*>q;
-    q.push(root);
-    while(q.size()){
-    node* temp=q.front();
-    cout<<temp->val<<" ";
-    q.pop();
-    if(temp->left) q.push(temp->left);
-    if(temp->right) q.push(temp->right);
-}
-}
-
-
 node* construct(vector<int>v){
         node* root=new node(v[0]);
         int n=v.size();
@@ -38,12 +25,10 @@ node* construct(vector<int>v){
         while(q.size() && i<n){
             node* temp=q.front();
             q.pop();
-            node* l;
-            node* r;
+            node* l=NULL;
+            node* r=NULL;
             if(v[i]!=INT_MIN) l=new node(v[i]);
-            else l=NULL;
             if(j!=n && v[j]!=INT_MIN) r=new node(v[j]);
-            else r=NULL;
             temp->left=l;
             temp->right=r;
             if(l!=NULL) q.push(l);
@@ -53,11 +38,15 @@ node* construct(vector<int>v){
             j+=2;
         }
         return root;
-}
+};
 int main(){
     vector<int>v={1,2,3,4,5,INT_MIN,6,INT_MIN,INT_MIN,7,8,9};
     node* root=construct(v);
-    levelOrderQueue(root);
+
+
+
+    // PRINT IT TO SEE AND TO VERIFY
+    
 
 
 

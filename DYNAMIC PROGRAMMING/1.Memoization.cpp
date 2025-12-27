@@ -4,15 +4,16 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-int fibo(int n,vector<int>&v){
+int fibo(vector<int>&dp, int n){
     if(n<=1) return n;
-    if(v[n]!=-1) return v[n];
-    else return v[n]=fibo(n-1,v)+fibo(n-2,v);
+    if(dp[n]!=-1) return dp[n];
+    else return fibo(dp,n-1)+fibo(dp,n-2);
 }
 int main(){
     int n;
-    cout<<"Enter the fibo element to find: ";
+    cout<<"Enter n: ";
     cin>>n;
-    vector<int>v(n+1,-1);
-    cout<< fibo(n,v);
+    vector<int>dp(n+1,-1);
+    cout<<fibo(dp,n);
+
 }
