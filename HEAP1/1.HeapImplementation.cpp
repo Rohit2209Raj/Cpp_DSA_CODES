@@ -31,6 +31,34 @@ class heap{
         }
     }
 
+    void deletefromheap(){
+        
+        if(size==0){
+            cout<<"Size is 0, so can't delete anything: ";
+            return;
+        }
+
+        arr[1]=arr[size];
+        size--;
+
+        int i=1;
+
+        while(i<=size){
+            int lchild=i*2;
+            int rchild=2*i+1;
+
+            if(lchild<=size && arr[i] < arr[lchild]) {
+                swap(arr[lchild],arr[i]);
+                i=lchild;
+            }
+            else if(rchild<=size && arr[i] < arr[rchild]){
+                swap(arr[i],arr[rchild]);
+                i=rchild;
+            }
+            else return;
+        }
+}
+
     void print(){
         for(int i=1;i<=size;i++){
             cout<<arr[i]<<" ";
