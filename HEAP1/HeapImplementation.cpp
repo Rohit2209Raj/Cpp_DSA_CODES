@@ -112,8 +112,17 @@ int main(){
 
     // // WE WILL DO HEAPSORT
     // Using a maxheap
-    int arr[]={70,60,55,45,50};
+    // int arr[]={70,60,55,45,50};
+    // if array dont provided as palneed heapify it;
+
+    int arr[]={60,550,55,30,20,40,155};
+
+
+
     int n=sizeof(arr)/sizeof(arr[0]);
+    for(int i=(n/2);i>=0;i--){
+        heapify(arr,n,i);
+    }
     int size=n-1;
     int c=0;
     while(size>0){
@@ -123,7 +132,7 @@ int main(){
         cout<<arr[i]<<" ";
         }
         cout<<endl;
-        heapify(arr,n-c,0);
+        heapify(arr,n-c-1,0);
         cout<<"After heapify"<<endl;
         for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
@@ -137,6 +146,7 @@ int main(){
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
+
 
 
 
