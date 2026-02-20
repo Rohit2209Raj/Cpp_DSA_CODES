@@ -57,7 +57,8 @@ class heap{
             }
             else return;
         }
-}
+    }
+
 
     void print(){
         for(int i=1;i<=size;i++){
@@ -65,15 +66,65 @@ class heap{
         }
     }
 };
+void heapify(int arr[],int n,int idx){
+        int largestidx=idx;
+        int left=idx*2;
+        int right=idx*2+1;
+
+        if(left<=n && arr[left] > arr[largestidx]){
+            largestidx=left;
+        }
+        if(right<=n && arr[right]>arr[largestidx]){
+            largestidx=right;
+        }
+
+        if(largestidx != idx){
+            swap(arr[largestidx],arr[idx]);
+            heapify(arr,n,largestidx);
+        }
+    }
 
 int main(){
-    heap h;
-    h.insert(60);
-    h.insert(550);
-    h.insert(55);
-    h.insert(30);
-    h.insert(20);
-    h.insert(40);
-    h.insert(155);
-    h.print();
+    // heap h;
+    // h.insert(60);
+    // h.insert(550);
+    // h.insert(55);
+    // h.insert(30);
+    // h.insert(20);
+    // h.insert(40);
+    // h.insert(155);
+    // h.print();
+
+    // h.deletefromheap();
+    // h.print();
+
+    int arr[]={60,550,55,30,20,40,155};
+    int n=sizeof(arr)/sizeof(arr[0]);
+
+    // for(int i=(n/2);i>=1;i--){
+    //     heapify(arr,n,i);
+    // }
+
+    // cout<<"After heapify the array: "<<endl;
+    // for(int i=1;i<n;i++){
+    //     cout<<arr[i]<<" ";
+    // }
+
+    // WE WILL DO HEAPSORT
+    int size=n-1;
+    int c=0;
+    while(size>0){
+        heapify(arr,n-c,0);
+        swap(arr[0],arr[size]);
+        size--;
+        c++;
+    }
+
+    cout<<"After sorting the array: "<<endl;
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+
+
+
 }
