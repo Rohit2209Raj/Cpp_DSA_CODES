@@ -68,13 +68,13 @@ class heap{
 };
 void heapify(int arr[],int n,int idx){
         int largestidx=idx;
-        int left=idx*2;
-        int right=idx*2+1;
+        int left=idx*2+1;
+        int right=idx*2+2;
 
-        if(left<=n && arr[left] > arr[largestidx]){
+        if(left<n && arr[left] > arr[largestidx]){
             largestidx=left;
         }
-        if(right<=n && arr[right]>arr[largestidx]){
+        if(right<n && arr[right]>arr[largestidx]){
             largestidx=right;
         }
 
@@ -98,24 +98,37 @@ int main(){
     // h.deletefromheap();
     // h.print();
 
-    int arr[]={60,550,55,30,20,40,155};
-    int n=sizeof(arr)/sizeof(arr[0]);
+    // int arr[]={60,550,55,30,20,40,155};
+    // int n=sizeof(arr)/sizeof(arr[0]);
 
-    // for(int i=(n/2);i>=1;i--){
+    // for(int i=(n/2);i>=0;i--){
     //     heapify(arr,n,i);
     // }
 
     // cout<<"After heapify the array: "<<endl;
-    // for(int i=1;i<n;i++){
+    // for(int i=0;i<n;i++){
     //     cout<<arr[i]<<" ";
     // }
 
-    // WE WILL DO HEAPSORT
+    // // WE WILL DO HEAPSORT
+    // Using a maxheap
+    int arr[]={70,60,55,45,50};
+    int n=sizeof(arr)/sizeof(arr[0]);
     int size=n-1;
     int c=0;
     while(size>0){
+        swap(arr[0],arr[n-1-c]);
+        cout<<"After swap"<<endl;
+        for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+        }
+        cout<<endl;
         heapify(arr,n-c,0);
-        swap(arr[0],arr[size]);
+        cout<<"After heapify"<<endl;
+        for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+        }
+        cout<<endl;
         size--;
         c++;
     }
