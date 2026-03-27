@@ -2,7 +2,7 @@
 #include<vector>
 #include<queue>
 using namespace std;
-void dfs(int i,vector<int>& visited,vector<int> adj[]){
+void dfs(int i,vector<int>& visited,vector<vector<int>>adj){
     if(visited[i]==1) return;
     visited[i]=1;
     cout<<i<<" ";
@@ -13,7 +13,8 @@ void dfs(int i,vector<int>& visited,vector<int> adj[]){
 int main(){
     int n,m;
     cin>>n>>m;
-    vector<int>adj[n+1];
+    // vector<int>adj[n+1];
+    vector<vector<int>>adj(n+1);
     for(int i=0;i<m;i++){
         int u,v;
         cin>>u>>v;
