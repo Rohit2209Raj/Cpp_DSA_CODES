@@ -16,5 +16,7 @@ int main(){
     // arr[0]=45;
     
 
-
+/*
+njbsfvkbcrDBXVOWhsfvoj wBNSIGBVOudgbfyhcbadhjfcv
+dhcbwjodbnchik*/
 }
