@@ -23,7 +23,7 @@ bool print(vector<int>& nums,vector<int>& temp,int target,int idx){
 }
 int main(){
     vector<int>nums={1,2,1};
-    int target = 3;
+    int target = 2;
     vector<int> temp;
 
    print(nums,temp,target,0);
